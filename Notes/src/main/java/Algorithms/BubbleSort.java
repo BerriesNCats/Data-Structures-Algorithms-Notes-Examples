@@ -30,17 +30,16 @@ public class BubbleSort {
     }
 
     /**
-     * i serves as a pointer to what has already been sorted
-     * j serves as a pointer to the two elements being compared
-     * since we determine the first element by locating it the left of j, on the first
-     * run j starts as 1 so the pointer will point to j - 1 which is 0 and j which is 1
-     * the temp is used to hold an element being swapped so it is not erased in the process
-     * of swapping
+     *      i serves as a pointer to what has already been sorted
+     *      j serves as a pointer to the two elements being compared
+     *      since we determine the first element by locating it the left of j, on the first
+     *      run j starts as 1 so the pointer will point to j - 1 which is 0 and j which is 1
+     *      the temp is used to hold an element being swapped so it is not erased in the process
+     *      of swapping
      *
      *              Quadratic Time - O of N to the power of 2
      * We must visit every element on each iteration and we must iterate through every element
-     * for the amount of elements we are sorting.
-     */
+     * for the amount of elements we are sorting. */
     public static int[] bubbleSort(int[] array) {
         int numberOfElements = array.length;
         int temp = 0;
