@@ -19,11 +19,11 @@ package Algorithms;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] array = {5, 18, 19, 2, 4, 75, 35, 234, 242, 645, 6, 24, 353 , 466};
-        array = bubbleSort(array);
+        int[] numbers = {5, 18, 19, 2, 4, 75, 35, 234, 242, 645, 6, 24, 353 , 466};
+        bubbleSort(numbers);
         StringBuilder arrayPrint = new StringBuilder();
-        for (int i = 0; i < array.length; i++) {
-            arrayPrint.append(array[i]).append(", ");
+        for (int i = 0; i < numbers.length; i++) {
+            arrayPrint.append(numbers[i]).append(", ");
         }
         System.out.println(arrayPrint.substring(0, arrayPrint.length() - 2));
 
@@ -40,20 +40,22 @@ public class BubbleSort {
      *              Quadratic Time - O of N to the power of 2
      * We must visit every element on each iteration and we must iterate through every element
      * for the amount of elements we are sorting. */
-    public static int[] bubbleSort(int[] array) {
-        int numberOfElements = array.length;
-        int temp = 0;
+    public static void bubbleSort(int[] numbers) {
+        int numberOfElements = numbers.length;
         for (int i = 0; i < numberOfElements; i++) {
             for (int j = 1; j < (numberOfElements - i); j++) {
                 // Swap the elements if the one before is greater than the one after
                 // To swap two elements you need a place to store the one being swapped
-                if (array[j-1] > array[j]) {
-                    temp = array[j-1];
-                    array[j-1] = array[j];
-                    array[j] = temp;
+                if (numbers[j-1] > numbers[j]) {
+                    swap(numbers, j-1, j);
                 }
             }
         }
-        return array;
+    }
+
+    private static void swap(int[] numbers, int i, int j) {
+        int temp = numbers[i];
+        numbers[i] = numbers[j];
+        numbers[j] = temp;
     }
 }

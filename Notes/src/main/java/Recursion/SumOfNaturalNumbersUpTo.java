@@ -31,7 +31,7 @@ public class SumOfNaturalNumbersUpTo {
          *    The recursive case for this method is when number is greater than 1 as there
          *    are smaller natural numbers that need to be added to the sum
          *    We progress towards the terminating base case as the recursive call makes
-         *    whatever number is passed in smaller on each recursive call */
+         *    whatever number is passed in smaller on each recursive call by subtracting 1 */
         else return number + sumOfNaturalNumbersUpTo(number - 1);
     }
 }
