@@ -44,8 +44,6 @@ public class BubbleSort {
         int numberOfElements = numbers.length;
         for (int i = 0; i < numberOfElements; i++) {
             for (int j = 1; j < (numberOfElements - i); j++) {
-                // Swap the elements if the one before is greater than the one after
-                // To swap two elements you need a place to store the one being swapped
                 if (numbers[j-1] > numbers[j]) {
                     swap(numbers, j-1, j);
                 }
