@@ -22,35 +22,25 @@ public class BubbleSort {
         int[] numbers = {5, 18, 19, 2, 4, 75, 35, 234, 242, 645, 6, 24, 353 , 466};
         bubbleSort(numbers);
         StringBuilder arrayPrint = new StringBuilder();
-        for (int i = 0; i < numbers.length; i++) {
-            arrayPrint.append(numbers[i]).append(", ");
-        }
+        for (int i = 0; i < numbers.length; i++) { arrayPrint.append(numbers[i]).append(", "); }
         System.out.println(arrayPrint.substring(0, arrayPrint.length() - 2));
-
     }
 
     /**
-     *      i serves as a pointer to what has already been sorted
-     *      j serves as a pointer to the two elements being compared
-     *      since we determine the first element by locating it the left of j, on the first
-     *      run j starts as 1 so the pointer will point to j - 1 which is 0 and j which is 1
-     *      the temp is used to hold an element being swapped so it is not erased in the process
-     *      of swapping
      *
      *              Quadratic Time - O of N to the power of 2
      * We must visit every element on each iteration and we must iterate through every element
      * for the amount of elements we are sorting. */
     public static void bubbleSort(int[] numbers) {
-        int numberOfElements = numbers.length;
-        for (int i = 0; i < numberOfElements; i++) {
-            for (int j = 1; j < (numberOfElements - i); j++) {
-                if (numbers[j-1] > numbers[j]) {
-                    swap(numbers, j-1, j);
+
+        for (int lastUnsortedIndex = numbers.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex++) {
+            for (int i = 0; i < lastUnsortedIndex; i++) {
+                if (numbers[i] > numbers[i + 1]) {
+                    swap(numbers, i, i + 1);
                 }
             }
         }
     }
-
     private static void swap(int[] numbers, int i, int j) {
         int temp = numbers[i];
         numbers[i] = numbers[j];
