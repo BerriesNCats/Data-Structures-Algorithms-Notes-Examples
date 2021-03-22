@@ -30,7 +30,6 @@ public class InsertionSort {
      *      reach  0 which is the front of the array if our 'newElement' is the lowest value and
      *      will be inserted there or as long as the element we are currently looking at is
      *      greater then the element we are trying to insert.
-     *  -
      */
 
     public static void insertionSort(int[] numbers) {
