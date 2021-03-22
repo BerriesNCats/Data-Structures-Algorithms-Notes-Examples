@@ -32,7 +32,7 @@ public class BubbleSort {
      * for the amount of elements we are sorting. */
     public static void bubbleSort(int[] numbers) {
 
-        for (int lastUnsortedIndex = numbers.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex++) {
+        for (int lastUnsortedIndex = numbers.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
             for (int i = 0; i < lastUnsortedIndex; i++) {
                 if (numbers[i] > numbers[i + 1]) {
                     swap(numbers, i, i + 1);
