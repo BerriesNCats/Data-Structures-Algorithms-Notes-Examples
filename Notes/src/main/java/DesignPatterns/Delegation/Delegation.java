@@ -20,6 +20,8 @@ class Printer {
     RealPrinter realPrinter = new RealPrinter();
 
     void print() {
+        // This is how we delegate that printer calls the real printer. The responsibility is
+        // given to the real printer from the printer
         realPrinter.print();
     }
 }
