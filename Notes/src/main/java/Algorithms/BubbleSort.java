@@ -8,7 +8,7 @@ package Algorithms;
  * It requires two for loops as the entire array is not sorted in one pass but sorted by
  * having the largest value bubble to its correct position on each iteration.
  *              Quadratic Time
- *      BubbleSort is a O(N2) (N2 being N to the power of 2)
+ *      BubbleSort is a O(n^2)
  *
  *
  * BubbleSort is therefore considered an inefficient algorithm because as the amount of data
@@ -27,8 +27,7 @@ public class BubbleSort {
     }
 
     /**
-     *
-     *              Quadratic Time - O of N to the power of 2
+     *     Quadratic Time - O(n^2)
      * We must visit every element on each iteration and we must iterate through every element
      * for the amount of elements we are sorting. */
     public static void bubbleSort(int[] numbers) {
