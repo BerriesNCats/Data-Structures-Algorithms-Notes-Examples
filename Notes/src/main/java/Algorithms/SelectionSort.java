@@ -1,37 +1,40 @@
 package Algorithms;
 
+/**
+ *      Selection Sort works by traversing the array and looking for the largest element we can
+ *       find from what has yet to be sorted.
+ *      Once we have traversed the array and found the largest element, we swap it with the last
+ *       element in the unsorted portion of the array.
+ *
+ *      Note that we could also look for the smallest element and swap it with the first element
+ *       that has yet to be sorted.
+ *
+ *       Selection Sort is an O(N^2) algorithm performing in Quadratic Time - Unstable
+ */
+
 public class SelectionSort {
 
     public static void main(String[] args) {
         int[] numbers = {5, 3, 6, 2, 74, 67, 11, 24, 52, 36, 47, 85, 390};
-
         selectionSort(numbers);
-
         for (int i = 0; i < numbers.length; i++) { System.out.println(numbers[i]); }
-
-
     }
 
     /**
-     *  In selection sort we require a variable 'index' to hold a pointer to the lowest
-     *  value that we find. If we find a lower value we reassign the pointer 'index' to
-     *  the index with the lower value. When we have looked at all the elements in the
-     *  array, we swap the lowest value to its correction position which we point at
-     *  with the variable 'i'.
-     *
-     *      Quadratic time - O(N^2)
-     *  Selection Sort is an inefficient algorithm performing in quadratic time.
-     */
+     *      - We traverse the arrays elements with 'i'
+     *      - We store the largest value we find with 'largestValue'
+     *      - We keep track of the position we are going to place the largest value in with 'lastUnsortedIndex'
+     *      - We swap 'largestValue' with 'lastUnsortedIndex'  */
 
     private static void selectionSort(int[] numbers) {
-        int arraySize = numbers.length;
-        for (int i = 0; i < arraySize -1; i++) {
-            int index = i;
-            for (int j = i + 1; j < arraySize; j++) {
-                if (numbers[j] < numbers[index]) index = j;
+        for (int lastUnsortedIndex = numbers.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
+            int largestValue = 0;
+            for (int i = 1; i <= lastUnsortedIndex; i++) {
+                if (numbers[i] > numbers[largestValue]) {
+                    largestValue = i;
+                }
             }
-
-        swap(numbers, i, index);
+            swap(numbers, largestValue, lastUnsortedIndex);
         }
     }
 

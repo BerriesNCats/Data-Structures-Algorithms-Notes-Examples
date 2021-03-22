@@ -1,19 +1,17 @@
 package Algorithms;
 
 /**
- * This algorithm is known as bubble sort and works by comparing two elements at a time
- * and swapping the elements if the one that appears first is greater then the one that
- * comes after. It then shifts its pointers by 1 to compare the next two elements
+ *      This algorithm is known as bubble sort and works by comparing two elements at a time
+ *      and swapping the elements if the one that appears first is greater then the one that
+ *      comes after. It then shifts its pointers by 1 to compare the next two elements
  *
- * It requires two for loops as the entire array is not sorted in one pass but sorted by
- * having the largest value bubble to its correct position on each iteration.
- *              Quadratic Time
- *      BubbleSort is a O(n^2)
+ *      It requires two for loops as the entire array is not sorted in one pass but sorted by
+ *      having the largest value bubble to its correct position on each iteration.
  *
+ *      BubbleSort is a O(n^2) algorithm performing in Quadratic Time - Stable
  *
- * BubbleSort is therefore considered an inefficient algorithm because as the amount of data
- * increases the cost of operations increases exponentially.
- *
+ *      BubbleSort is therefore considered an inefficient algorithm because as the amount of data
+ *          increases the cost of operations increases exponentially.
  */
 
 public class BubbleSort {
@@ -26,12 +24,7 @@ public class BubbleSort {
         System.out.println(arrayPrint.substring(0, arrayPrint.length() - 2));
     }
 
-    /**
-     *     Quadratic Time - O(n^2)
-     * We must visit every element on each iteration and we must iterate through every element
-     * for the amount of elements we are sorting. */
     public static void bubbleSort(int[] numbers) {
-
         for (int lastUnsortedIndex = numbers.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
             for (int i = 0; i < lastUnsortedIndex; i++) {
                 if (numbers[i] > numbers[i + 1]) {
@@ -40,6 +33,7 @@ public class BubbleSort {
             }
         }
     }
+
     private static void swap(int[] numbers, int i, int j) {
         int temp = numbers[i];
         numbers[i] = numbers[j];
