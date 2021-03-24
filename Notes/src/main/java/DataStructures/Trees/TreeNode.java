@@ -1,7 +1,7 @@
-package DataStructures;
+package DataStructures.Trees;
 
 /**
-    FileName: DataStructures.TreeNode.java
+    FileName: DataStructures.Trees.TreeNode.java
     A node contains data and points to it's children.
 
  */

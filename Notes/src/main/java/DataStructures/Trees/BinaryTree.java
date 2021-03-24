@@ -1,7 +1,7 @@
-package DataStructures;
+package DataStructures.Trees;
 
 /**
-    FileName: DataStructures.BinaryTree.java
+    FileName: DataStructures.Trees.BinaryTree.java
     A binary tree is a tree where each node has 0, 1 or 2 children.
  */
 

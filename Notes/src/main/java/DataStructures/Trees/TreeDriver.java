@@ -1,4 +1,4 @@
-package DataStructures;
+package DataStructures.Trees;
 
 public class TreeDriver {
 
