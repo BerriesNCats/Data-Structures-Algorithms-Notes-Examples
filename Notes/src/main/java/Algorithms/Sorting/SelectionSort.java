@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Sorting;
 
 /**
  *      Selection Sort works by traversing the array and looking for the largest element we can

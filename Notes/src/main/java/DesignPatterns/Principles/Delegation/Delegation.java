@@ -1,4 +1,4 @@
-package DesignPatterns.Delegation;
+package DesignPatterns.Principles.Delegation;
 
 /**
  * This program simply shows the control flow of delegation.

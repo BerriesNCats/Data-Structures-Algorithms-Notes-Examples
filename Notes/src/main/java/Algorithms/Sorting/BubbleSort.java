@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Sorting;
 
 /**
  *      This algorithm is known as bubble sort and works by comparing two elements at a time

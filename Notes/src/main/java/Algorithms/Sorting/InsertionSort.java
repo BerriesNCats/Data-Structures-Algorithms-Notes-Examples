@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Sorting;
 /**
  *
  *      In Insertion Sort we declare that the first index is in its correct position in
