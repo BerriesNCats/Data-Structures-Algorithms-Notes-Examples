@@ -6,15 +6,11 @@ package General.ExpandableArray;
 public class ExpandableArray {
 
     String[] expandableArray;
-    int arraySize;
-
 
     /**
      * Creates a new expandable array with no elements. */
     public ExpandableArray() {
-//. . . You fill in the implementation . . .
         expandableArray = new String[0];
-
     }
     /**
      * Sets the element at the given index position to the specified.
