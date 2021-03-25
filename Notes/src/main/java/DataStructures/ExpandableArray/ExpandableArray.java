@@ -21,8 +21,8 @@ public class ExpandableArray {
             String[] tempArray = expandableArray;
             expandableArray = new String[index + 1];
             System.arraycopy(tempArray, 0, expandableArray, 0, tempArray.length);
-            expandableArray[index] = String.valueOf(value);
         }
+        expandableArray[index] = String.valueOf(value);
     }
     /**
      * Returns the element at the specified index position, or null if
