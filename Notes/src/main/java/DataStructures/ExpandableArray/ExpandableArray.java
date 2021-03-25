@@ -1,4 +1,4 @@
-package General.ExpandableArray;
+package DataStructures.ExpandableArray;
 
 /**
  * This class provides methods for working with an array that expands * to include any positive index value supplied by the caller.

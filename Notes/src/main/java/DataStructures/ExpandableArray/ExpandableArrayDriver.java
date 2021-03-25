@@ -1,4 +1,4 @@
-package General.ExpandableArray;
+package DataStructures.ExpandableArray;
 
 public class ExpandableArrayDriver {
 
