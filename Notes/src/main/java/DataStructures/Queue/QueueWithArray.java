@@ -19,8 +19,8 @@ public class QueueWithArray {
         if (size() == queue.length - 1) {
             int numItems = size();
             Employee[] newArray = new Employee[2 * queue.length];
-           System.arraycopy(queue, frontOfQueue, newArray, 0, queue.length - frontOfQueue);
-           System.arraycopy(queue, 0, newArray, queue.length - frontOfQueue, backOfQueue);
+            System.arraycopy(queue, frontOfQueue, newArray, 0, queue.length - frontOfQueue);
+            System.arraycopy(queue, 0, newArray, queue.length - frontOfQueue, backOfQueue);
 
             queue = newArray;
             frontOfQueue = 0;
