@@ -22,6 +22,7 @@ public class SingletonEmergencyMessage {
     }
 
     public void emergencyMessge() {
-        System.out.println("This is a unique emergency message. Cats have taken over the world.");
+        System.out.println("I'm an emergency message. The only person that can call me is the" +
+                " unique instance of an object of the SingletonEmergencyMessage Class.");
     }
 }
