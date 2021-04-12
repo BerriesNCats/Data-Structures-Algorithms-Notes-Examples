@@ -14,6 +14,6 @@ public class Follower implements Observer {
 
     @Override
     public void update(String status) {
-
+        System.out.println("Status Updated");
     }
 }
