@@ -1,20 +1,14 @@
 package HackerRank;
 
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
 import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 
 
-class Result {
+public class Result {
 
     /*
      * Complete the 'funWithAnagrams' function below.
@@ -57,7 +51,7 @@ public class Anagrams {
         })
                 .collect(toList());
 
-        List<String> result = Result.funWithAnagrams(text);
+        List<String> result = HackerRank.FindFactor.Result.funWithAnagrams(text);
 
         bufferedWriter.write(
                 result.stream()
