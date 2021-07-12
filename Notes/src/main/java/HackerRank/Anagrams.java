@@ -8,7 +8,7 @@ import static java.util.stream.Collectors.toList;
 
 
 
-public class Result {
+class AnagramsResult {
 
     /*
      * Complete the 'funWithAnagrams' function below.
@@ -51,7 +51,7 @@ public class Anagrams {
         })
                 .collect(toList());
 
-        List<String> result = HackerRank.FindFactor.Result.funWithAnagrams(text);
+        List<String> result = AnagramsResult.funWithAnagrams(text);
 
         bufferedWriter.write(
                 result.stream()

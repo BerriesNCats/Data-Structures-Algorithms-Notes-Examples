@@ -39,6 +39,7 @@ class Result {
         return factorsOfN.get(indexWeWant);
     }
 
+
 }
 
 public class FindTheFactor {
