@@ -1,12 +1,12 @@
 package Comparable;
 
-public class ComparableUser implements Comparable<ComparableUser>{
+public class MyUser implements Comparable<MyUser>{
 
     private String firstName;
     private String userName;
     private int favoriteNumber;
 
-    public ComparableUser(String firstName, String userName, int favoriteNumber) {
+    public MyUser(String firstName, String userName, int favoriteNumber) {
         this.firstName = firstName;
         this.userName = userName;
         this.favoriteNumber = favoriteNumber;
@@ -14,10 +14,10 @@ public class ComparableUser implements Comparable<ComparableUser>{
 
     // This Override will order a comparable user list by their favorite number in ascending order
     @Override
-    public int compareTo(ComparableUser otherComparableUser) {
-        if (this.getFavoriteNumber() < otherComparableUser.getFavoriteNumber()) {
+    public int compareTo(MyUser otherMyUser) {
+        if (this.getFavoriteNumber() < otherMyUser.getFavoriteNumber()) {
             return -1;
-        } else if (this.getFavoriteNumber() > otherComparableUser.getFavoriteNumber()) {
+        } else if (this.getFavoriteNumber() > otherMyUser.getFavoriteNumber()) {
             return 1;
         } else {
             return 0;

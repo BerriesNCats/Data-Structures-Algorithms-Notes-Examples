@@ -6,23 +6,23 @@ import java.util.List;
 
 public class ComparableUserDriver {
     public static void main(String[] args) {
-        ComparableUser user1 = new ComparableUser("bob", "guy", 439);
-        ComparableUser user2 = new ComparableUser("some", "kind", 9);
-        ComparableUser user3 = new ComparableUser("so", "hey", 90);
-        ComparableUser user4 = new ComparableUser("this", "is", 390);
+        MyUser user1 = new MyUser("bob", "guy", 439);
+        MyUser user2 = new MyUser("some", "kind", 9);
+        MyUser user3 = new MyUser("so", "hey", 90);
+        MyUser user4 = new MyUser("this", "is", 390);
 
-        List<ComparableUser> comparableUsers = new ArrayList();
+        List<MyUser> myUsers = new ArrayList();
 
-        comparableUsers.add(user1);
-        comparableUsers.add(user2);
-        comparableUsers.add(user3);
-        comparableUsers.add(user4);
+        myUsers.add(user1);
+        myUsers.add(user2);
+        myUsers.add(user3);
+        myUsers.add(user4);
 
-        Collections.sort(comparableUsers);
+        Collections.sort(myUsers);
 
-        for (int i = 0; i < comparableUsers.size(); i++) {
-            System.out.println(comparableUsers.get(i).getFavoriteNumber() + " " +
-                    comparableUsers.get(i).getFirstName());
+        for (int i = 0; i < myUsers.size(); i++) {
+            System.out.println(myUsers.get(i).getFavoriteNumber() + " " +
+                    myUsers.get(i).getFirstName());
         }
     }
 }
