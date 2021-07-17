@@ -7,7 +7,7 @@ package EffectiveJava.Immutable;
  * 4. Make all fields private
  * 5. Ensure exclusive access to any mutable components.
  */
-// The class is declared final rendering unable to be extended
+// The class is declared final rendering it unable to be extended
 public final class Complex {
 
     // Instance fields are declared private and final
@@ -37,12 +37,15 @@ public final class Complex {
         return new Complex(realPart * complex.getRealPart() - imaginaryPart * complex.getImaginaryPart(),
                 realPart * complex.getImaginaryPart() + imaginaryPart * complex.getRealPart());
     }
+
     public Complex dividedBy(Complex complex) {
         double temp = complex.getRealPart() * complex.getRealPart() + complex.getImaginaryPart() * complex.getImaginaryPart();
         return new Complex((realPart * complex.getRealPart() + imaginaryPart * complex.getImaginaryPart()) / temp,
                 (imaginaryPart * complex.getRealPart() - realPart * complex.getImaginaryPart()) / temp);
     }
-    @Override public boolean equals(Object o) {
+
+    @Override
+    public boolean equals(Object o) {
         if (o == this)
             return true;
         if (!(o instanceof Complex))
@@ -51,10 +54,14 @@ public final class Complex {
         return Double.compare(c.getRealPart(), realPart) == 0
                 && Double.compare(c.getImaginaryPart(), imaginaryPart) == 0;
     }
-    @Override public int hashCode() {
+
+    @Override
+    public int hashCode() {
         return 31 * Double.hashCode(realPart) + Double.hashCode(imaginaryPart);
     }
-    @Override public String toString() {
+
+    @Override
+    public String toString() {
         return "(" + realPart + " + " + imaginaryPart + "i)";
     }
 }
