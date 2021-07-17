@@ -1,4 +1,4 @@
-package Comparator;
+package CollectionsFramework.Comparator;
 
 public class UserDetails {
 

@@ -1,4 +1,4 @@
-package Comparable;
+package CollectionsFramework.Comparable;
 
 public class MyUser implements Comparable<MyUser>{
 
