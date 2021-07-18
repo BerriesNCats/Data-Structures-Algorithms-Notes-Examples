@@ -47,14 +47,12 @@ public class FirstNonRepeatingCharacter {
                 characterMap.put(currentChar, 1);
             }
         }
-
         // Loop through again to find the first char with a value of 1 which denotes it being non repeating and the
         // answer to the solution so return that char
         for (int i = 0; i < string.length(); i++) {
             char currentChar = string.charAt(i);
             if (characterMap.get(currentChar) == 1) return currentChar;
         }
-
         return '_';
     }
 
