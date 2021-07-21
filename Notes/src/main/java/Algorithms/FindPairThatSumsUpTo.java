@@ -3,7 +3,7 @@ package Algorithms;
 public class FindPairThatSumsUpTo {
 
     /*
-     * Given an array of integers and integer a number, create a boolean function that checks if there exists in the
+     * Given an array of integers and an integer number, create a boolean function that checks if there exists in the
      * array two integers whose sum equals the number passed in.
      */
 
