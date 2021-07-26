@@ -34,14 +34,12 @@ public class ValidParentheses {
         for (int i = 0; i < string.length(); i++) {
             if (string.charAt(i) == '(' || string.charAt(i) == '{' || string.charAt(i) == '[') {
                 parenthesesStack.push(string.charAt(i));
-            } else if (string.charAt(i) == ')' || string.charAt(i) == '}' || string.charAt(i) == ']') {
-                if ((parenthesesStack.peek() == '(' && string.charAt(i) == ')') ||
-                    (parenthesesStack.peek() == '{' && string.charAt(i) == '}') ||
-                    (parenthesesStack.peek() == '[' && string.charAt(i) == ']')) {
-                    parenthesesStack.pop();
-                } else {
-                    return false;
-                }
+            } else if (string.charAt(i) == ')' && !parenthesesStack.isEmpty() && parenthesesStack.peek() == '(') {
+                parenthesesStack.pop();
+            } else if (string.charAt(i) == '}' && !parenthesesStack.isEmpty() && parenthesesStack.peek() == '{') {
+                parenthesesStack.pop();
+            } else if (string.charAt(i) == ']' && !parenthesesStack.isEmpty() && parenthesesStack.peek() == '[') {
+                parenthesesStack.pop();
             }
         }
         return parenthesesStack.isEmpty();

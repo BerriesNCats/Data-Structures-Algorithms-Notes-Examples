@@ -27,6 +27,17 @@ public class TwoSum {
 
     }
 
+    /**
+     * Steps
+     * - Create two pointers, i & j
+     * - if the values held at i & j equal the target value, return those indexes
+     * - if not keep searching through the array by moving the right pointer
+     * - if no solution is found in the inner for loop, move the left index pointer and search again
+     *
+     * @param numbers an array of numbers
+     * @param target the target value whose value is equal to two numbers in the array
+     * @return the index of two numbers in the array whose combined value equals the target value
+     */
     public static int[] twoSum(int[] numbers, int target) {
 
         // i is our left index pointer
