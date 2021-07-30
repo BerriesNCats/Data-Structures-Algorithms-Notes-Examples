@@ -1,5 +1,4 @@
 package Algorithms.LeetCode;
-
 /**
  * LeetCode #0014
  *
@@ -51,5 +50,4 @@ public class LongestCommonPrefix {
         }
         return prefix;
     }
-
 }
