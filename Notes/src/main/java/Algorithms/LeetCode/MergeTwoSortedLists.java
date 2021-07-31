@@ -27,7 +27,7 @@ public class MergeTwoSortedLists {
      * @return the merge sorted linked list
      */
     public static ListNode mergeTwoLinkedLists(ListNode list1, ListNode list2) {
-        ListNode mergedList = new ListNode(-1);
+        ListNode mergedList = new ListNode(-100);
         ListNode tempHead = mergedList;
 
         while (list1 != null & list2 != null) {
