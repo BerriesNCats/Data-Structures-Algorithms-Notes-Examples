@@ -1,4 +1,4 @@
-package HackerRank.FindFactor;
+package Algorithms.HackerRank.FindFactor;
 
 import java.io.*;
 import java.util.*;

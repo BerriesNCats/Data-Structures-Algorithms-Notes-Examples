@@ -3,7 +3,7 @@ package Algorithms.LeetCode;
 import java.util.Stack;
 
 /**
- * LeetCode #0020
+ * Algorithms.LeetCode #0020
  *
  * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is
  * valid. An input string is valid if the opening brackets matches the closing bracket and the brackets are in the

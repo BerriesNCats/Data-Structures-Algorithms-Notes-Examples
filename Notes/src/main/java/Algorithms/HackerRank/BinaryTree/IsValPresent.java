@@ -1,10 +1,7 @@
-package HackerRank.BinaryTree;
+package Algorithms.HackerRank.BinaryTree;
 
-import java.io.*;
 import java.util.*;
-import java.util.regex.*;
-import java.text.*;
-import java.math.*;
+
 public class IsValPresent {
 
     private static class Node {
