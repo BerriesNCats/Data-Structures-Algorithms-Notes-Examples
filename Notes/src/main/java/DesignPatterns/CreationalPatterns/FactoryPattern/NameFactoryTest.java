@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class NameFactoryTest {
 
     // Note the call to the name factory is the same in both test methods and
-    // the factory decides which class to use to create the approriate object
+    // the factory decides which class to use to create the appropriate object
 
 
     @Test
