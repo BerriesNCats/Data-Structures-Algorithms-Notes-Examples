@@ -9,10 +9,11 @@ public class MyRegExLibrary {
 
     public static void main(String[] args) {
         System.out.println(isSingleSentence("I walked the cat to the moon Today!"));
+        System.out.println(isSingleSentence("roses are red, violets are blue"));
 
     }
 
-    private static boolean isSingleSentence(String singleSentence) {
+    public static boolean isSingleSentence(String singleSentence) {
         return singleSentencePattern.matcher(singleSentence).matches();
     }
 }
