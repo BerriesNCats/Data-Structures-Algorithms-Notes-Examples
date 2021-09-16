@@ -18,6 +18,11 @@ public class ReverseString {
             aPointer++;
             bPointer--;
         }
+    }
 
+    public String reverseString(String string) {
+        StringBuilder stringBuilder = new StringBuilder(string);
+        stringBuilder.reverse();
+        return stringBuilder.toString();
     }
 }

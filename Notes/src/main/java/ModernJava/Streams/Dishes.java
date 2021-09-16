@@ -2,6 +2,7 @@ package ModernJava.Streams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Dishes {
@@ -10,7 +11,7 @@ public class Dishes {
     getThreeHighCalorieDishNames().forEach(System.out::println);
   }
 
-  static List<Dish> menu =
+  private static final List<Dish> menu =
       Arrays.asList(
           new Dish("pork", false, 800, Dish.Type.MEAT),
           new Dish("beef", false, 700, Dish.Type.MEAT),
@@ -24,7 +25,7 @@ public class Dishes {
       );
 
     /**
-     * Stream<Dish> ->
+     *     stream   ->  Stream<Dish>    ->
      *     filter   ->  Stream<Dish>    ->
      *     map      ->  Stream<String>  ->
      *     limit    ->  Stream<String>  ->
@@ -35,6 +36,20 @@ public class Dishes {
         .filter(dish -> dish.getCalories() > 500)
         .map(Dish::getName)
         .limit(3)
+        .sorted()
+        .collect(Collectors.toList());
+  }
+
+  /**
+   *      stream   ->  Stream<Dish>     ->
+   *      map      ->  Stream<String>   ->
+   *      map      ->  Stream<Integer>  ->
+   *      collect  ->  <List>Integer
+   */
+  public static List<Integer> getDishNameLengths() {
+    return menu.stream()
+        .map(Dish::getName)
+        .map(String::length)
         .collect(Collectors.toList());
   }
 }

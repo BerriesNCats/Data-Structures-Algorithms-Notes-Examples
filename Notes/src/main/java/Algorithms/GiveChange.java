@@ -1,7 +1,3 @@
-/*
- * Copyright David Amateau 2021.
- */
-
 package Algorithms;
 
 import java.util.Arrays;

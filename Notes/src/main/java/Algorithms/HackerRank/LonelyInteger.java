@@ -5,7 +5,7 @@ import java.util.List;
 
 public class LonelyInteger {
 
-    public static int lonelyinteger(List<Integer> a) {
+    public static int lonelyInteger(List<Integer> a) {
         Collections.sort(a);
 
         if (a.size() < 2) return a.get(0);

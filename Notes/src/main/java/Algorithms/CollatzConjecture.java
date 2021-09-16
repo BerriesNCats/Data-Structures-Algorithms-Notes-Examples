@@ -3,7 +3,7 @@ package Algorithms;
 public class CollatzConjecture {
 
   public static void main(String[] args) {
-    collatzConjecture(458);
+    collatzConjecture(1999484);
   }
 
   public static void collatzConjecture(int number) {
